@@ -104,3 +104,15 @@ document.querySelector('.destination .btn').addEventListener('mouseup', (event) 
 document.querySelector('footer').addEventListener('contextmenu', (event) => {
   document.querySelector('footer').style.backgroundColor = 'cornflowerblue';
 })
+
+// stop propigation
+document.querySelector('.intro').addEventListener('click', (event) => {
+  document.querySelector('.intro').style.backgroundColor = 'orange';
+})
+
+document.querySelector('.intro p').addEventListener('click', (event) => {
+  document.querySelector('.intro p').style.backgroundColor = 'purple';
+  if(document.querySelector('#prop-checkbox').checked) {
+    event.stopPropagation();
+  }
+})
